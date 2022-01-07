@@ -55,7 +55,7 @@ export default {
             this.task=""
         },
         deleteAll(){
-            this.tasks = []
+            this.tasks = this.tasks.filter(x => !x.completed)
         },
         del(task){
             this.tasks = this.tasks.filter(x => x != task)
